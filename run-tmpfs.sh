@@ -7,6 +7,7 @@ STATE_TMPFS_SIZE_MB="4096"
 
 
 docker run \
+	--restart unless-stopped \
 	--publish "$SERVER_HTTP_PORT:$SERVER_HTTP_PORT" \
 	--rm \
 	--tmpfs "/dev/disk/by-id:noexec,rw,size=4k" \
